@@ -1,0 +1,29 @@
+How to Block Search Engines Using robots.txt disallow Rule.
+
+If you want to check your site’s robots.txt file, you can view it by adding robots.txt after your site’s URL, for example, www.myname.com/robots.txt. You can edit it through your hosting control panel’s file manager, or an FTP client.
+
+Let’s configure the robots.txt file via Hostinger’s hPanel’s file manager. First, you have to enter the File Manager in the Files section of the panel. Then, open the file from the public_html directory.
+
+If the file isn’t there, you can create it manually. Just click the New File button at the top right corner of the file manager, name it robots.txt and place it in public_html.
+
+Now you can start adding commands to the file. The two main ones you should know are:
+
+User-agent – refers to the type of bot that will be restricted, such as Googlebot or Bingbot.
+Disallow – is where you want to restrict the bots.
+Let’s look at an example. If you want to prevent Google’s bot from crawling on a specific folder of your site, you can put this command in the file:
+
+User-agent: Googlebot 
+Disallow: /example-subfolder/
+
+You can also block the bots from crawling on a specific web page. If you want to block Bingbot from a page, then you can set the command like this:
+
+User-agent: Bingbot
+Disallow: /example-subfolder/blocked-page.html
+
+Now, what if you want the robots.txt file to disallow all search engine bots? You can do it by putting an asterisk (*) next to User-agent. And if you want to prevent them from accessing the entire site, just put a slash (/) next to Disallow. Here’s how it looks:
+
+User-agent: *
+Disallow: /
+
+You can set up different configurations for different search engines by adding multiple commands to the file. Also, keep in mind that the changes take effect after you save the robots.txt file.
+
